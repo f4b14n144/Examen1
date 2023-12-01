@@ -34,6 +34,11 @@ public class EmpleadoTiempoParcial implements Empleado
         return pago;
     }
 
+    @Override
+    public double getHorasRestantes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
    
     
 }

@@ -30,6 +30,7 @@ public class Main {
         String seguroMedico = variables.get("seguro médico");
         String bonificaciones = variables.get("bonificaciones");
 
+        
         // Use the variables as needed
         System.out.println("Tipo empleado: " + tipo);
         System.out.println("Nombre: " + nombre);
@@ -38,11 +39,11 @@ public class Main {
         System.out.println("Seguro Médico: " + seguroMedico);
         System.out.println("Bonificaciones: " + bonificaciones);
 
+      
     }
         
         
-       /*ReadDoc rd=new ReadDoc();
-       rd.readDocument();*/
+       
        
    
 

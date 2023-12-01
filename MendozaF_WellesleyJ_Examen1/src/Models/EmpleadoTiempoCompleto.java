@@ -35,6 +35,11 @@ public class EmpleadoTiempoCompleto implements Empleado
     {
         return horas;
     }
+
+    @Override
+    public double getHorasRestantes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
         
 }

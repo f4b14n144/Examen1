@@ -18,7 +18,7 @@ public class Reader {
    
    public Map<String, String> leerArchivo() {
         Map<String, String> variablesMap = new HashMap<>();
-        String filePath = "src/reader/Empleados.txt";
+        String filePath = "src\\reader\\Empleados.txt";
 
         try {
             Scanner scanner = new Scanner(new File(filePath));
