@@ -41,6 +41,11 @@ public class Main {
             //dependiendo de lo que quiera la profe porque habria que escribir el sueldo final 
             //luego de seguro bonificaciones y etc.
             System.out.println(seguroEmpleado.getPagoEmpleado());
+            
+            
+            // de aqui para abajo habria que crear el resto de empleados
+            // para eso se instancia de nueco a reader y se crea una lista nueva con las cosas de cada empleado
+            //no se si sea lo adecuado pero la dory no pidio singleton asi que chill
     }
 }    
         
