@@ -6,7 +6,9 @@ package Models;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -15,18 +17,20 @@ import java.util.Scanner;
  * @author jellz
  */
 public class Reader {
-   int linea;
- 
-   
+    int linea;
 
-public Map<String, String> leerArchivo() {
-        Map<String, String> variablesMap = new HashMap<>();
+    public Reader(int linea) {
+        this.linea = linea;
+    }
+
+    public List<String> leerArchivo() {
+        List<String> attributesList = new ArrayList<>();
         String filePath = "src/Models/Empleados.txt";
 
         try {
             Scanner scanner = new Scanner(new File(filePath));
 
-            int lineNumber = 1;
+            int lineNumber = linea;
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -35,25 +39,12 @@ public Map<String, String> leerArchivo() {
                 if (lineNumber == 2) {
                     String[] words = line.split(",");
 
-                    // Define variable names
-                    String[] variableNames = {"Nombre", "Tipo empleado", "minutos", "minutos extras", "seguro médico", "bonificaciones"};
-
-                    // Store each variable with its name in the map
-                    for (int i = 0; i < words.length; i++) {
-                        variablesMap.put(variableNames[i], words[i].trim());
+                    for (String word : words) {
+                        attributesList.add(word.trim());
                     }
 
-                       /* String tipo = variablesMap.get("Tipo empleado");
-                        String nombre = variablesMap.get("Nombre");
-                        String minutos = variablesMap.get("minutos");
-                        String minutosExtra = variablesMap.get("minutos extras");
-                        String seguroMedico = variablesMap.get("Seguro médico");
-                        String bonificaciones = variablesMap.get("bonificaciones");
-                        */
                     break;
-                    
                 }
-                
 
                 lineNumber++;
             }
@@ -62,7 +53,7 @@ public Map<String, String> leerArchivo() {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        
-        return variablesMap;
+
+        return attributesList;
     }
 }

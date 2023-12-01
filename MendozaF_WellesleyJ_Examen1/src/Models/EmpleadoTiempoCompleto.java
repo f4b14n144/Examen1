@@ -12,11 +12,11 @@ public class EmpleadoTiempoCompleto implements Empleado
         
 {
     double pago;
-    double horas;
-    
-    public EmpleadoTiempoCompleto(double pago,double horas)
+    int horas;
+    int horasRestantes;
+    public EmpleadoTiempoCompleto(int horas )
     {
-        this.pago=pago;
+
         this.horas=horas;
     }
 
@@ -27,6 +27,15 @@ public class EmpleadoTiempoCompleto implements Empleado
 
     @Override
     public double getPagoEmpleado() {
+        if (horas<=10)
+        {
+            pago=horas*1.5;
+        }
+        else if (horas<=10)
+        {
+            pago=10*1.5;
+            horasRestantes=horas-10;
+        }
         return pago;
     }
 
@@ -38,7 +47,7 @@ public class EmpleadoTiempoCompleto implements Empleado
 
     @Override
     public double getHorasRestantes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return horasRestantes;
     }
     
         
