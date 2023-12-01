@@ -14,21 +14,34 @@ public class DecHorasExtra extends DecEmpleado
     public DecHorasExtra(Empleado empleado) {
         super(empleado);
     }
-
-    @Override
-    public double getPagoEmpleado() {
-        return super.getPagoEmpleado(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
-
-    @Override
-    public double getHoras() {
-        return super.getHoras(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
-
-    @Override
-    public String getTipoEmpleado() {
-        return super.getTipoEmpleado(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+   public double sacarPago() {
+    double pago = 0.0;
+    double horas = empleado.getHoras();
+    String tipo = empleado.getTipoEmpleado();
+    
+    if (tipo.equalsIgnoreCase("Tiempo Completo")) {
+        if (horas <= 10) {
+            pago = horas * 1.50;
+        } else {
+            double horasExtras = horas - 10;
+            pago = 10 * 1.50 + horasExtras * 0.75;
+        }
+    } else if (tipo.equalsIgnoreCase("Tiempo Parcial")) {
+        double horasRestantes = empleado.getHorasRestantes(); // You might need to implement this method
+        pago = horasRestantes * 0.50;
     }
     
+    return pago;
+}
+    
+    
+    @Override
+    public double getPagoEmpleado()
+    {
+        double pago=sacarPago();
+        return super.getPagoEmpleado()+pago; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+  
     
 }
