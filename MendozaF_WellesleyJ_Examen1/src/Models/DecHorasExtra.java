@@ -27,7 +27,7 @@ public class DecHorasExtra extends DecEmpleado
             pago = 10 * 1.50 + horasExtras * 0.75;
         }
     } else if (tipo.equalsIgnoreCase("Tiempo Parcial")) {
-        double horasRestantes = empleado.getHorasRestantes(); // You might need to implement this method
+        double horasRestantes = empleado.getHorasRestantes(); 
         pago = horasRestantes * 0.50;
     }
     

@@ -17,7 +17,7 @@ public class ReadDoc
 {
     public void readDocument()
         {
-            String filePath="src\\Models\\Empleados.txt";
+            String filePath="src/Models/Empleados.txt";
         try (FileReader fileReader = new FileReader(new File(filePath));
                    BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 
