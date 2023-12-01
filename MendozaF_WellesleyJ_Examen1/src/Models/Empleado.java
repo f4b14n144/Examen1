@@ -15,6 +15,7 @@ public  interface Empleado
     double getPagoEmpleado();
     
     double getHoras();
+    double getHorasRestantes();
     
     
 }

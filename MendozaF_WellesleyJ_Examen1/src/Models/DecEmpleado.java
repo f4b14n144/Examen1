@@ -37,6 +37,15 @@ public class DecEmpleado implements Empleado
     {
         return empleado.getPagoEmpleado();
     }
-    
-   
+
+    @Override
+    public double getHorasRestantes() {
+        double horas = empleado.getHoras();
+        double horasRestantes = horas - 10;
+        return horasRestantes;
     }
+    
+}
+
+   
+    
