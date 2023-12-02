@@ -14,6 +14,7 @@ public class EmpleadoTiempoCompleto implements Empleado
     double pago;
     int horas;
     int horasRestantes;
+    String Nombre;
     public EmpleadoTiempoCompleto(int horas )
     {
 
@@ -49,6 +50,14 @@ public class EmpleadoTiempoCompleto implements Empleado
     public double getHorasRestantes() {
         return horasRestantes;
     }
+
+    @Override
+    public String getNombre() {
+        
+        return Nombre;
+    }
+    
+    
     
         
 }

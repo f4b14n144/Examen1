@@ -12,6 +12,7 @@ public class EmpleadoTiempoParcial implements Empleado
 {
     double horas;
     double pago;
+    String Nombre;
     public EmpleadoTiempoParcial(double horas,double pago)
     {
         this.horas=horas;
@@ -37,6 +38,13 @@ public class EmpleadoTiempoParcial implements Empleado
     @Override
     public double getHorasRestantes() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public String getNombre() {
+        
+        
+        return Nombre;
     }
 
    

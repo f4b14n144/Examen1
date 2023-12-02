@@ -10,6 +10,8 @@ package Models;
  */
 public class DecEmpleado implements Empleado
 {
+    
+    String Nombre;
    
      Empleado empleado;
      
@@ -43,6 +45,12 @@ public class DecEmpleado implements Empleado
         double horas = empleado.getHoras();
         double horasRestantes = horas - 10;
         return horasRestantes;
+    }
+
+    @Override
+    public String getNombre() {
+        
+        return Nombre;
     }
     
 }
