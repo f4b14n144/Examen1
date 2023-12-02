@@ -51,13 +51,6 @@ public class EmpleadoTiempoCompleto implements Empleado
         return horasRestantes;
     }
 
-    @Override
-    public String getNombre() {
-        
-        return Nombre;
-    }
-    
-    
     
         
 }

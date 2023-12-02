@@ -33,8 +33,7 @@ public class DecHorasExtra extends DecEmpleado
     
     return pago;
 }
-    
-    
+
     @Override
     public double getPagoEmpleado()
     {

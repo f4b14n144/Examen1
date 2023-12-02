@@ -17,7 +17,7 @@ public  interface Empleado
     double getHoras();
     
     double getHorasRestantes();
-    String getNombre();
+
     
     
 }

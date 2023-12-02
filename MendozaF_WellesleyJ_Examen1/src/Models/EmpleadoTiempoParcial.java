@@ -10,13 +10,13 @@ package Models;
  */
 public class EmpleadoTiempoParcial implements Empleado
 {
-    double horas;
+   int horas;
     double pago;
-    String Nombre;
-    public EmpleadoTiempoParcial(double horas,double pago)
+    int horasRestantes;
+    public EmpleadoTiempoParcial(int horas)
     {
         this.horas=horas;
-        this.pago=pago;
+      
     }
 
     @Override
@@ -30,21 +30,22 @@ public class EmpleadoTiempoParcial implements Empleado
     {
         return horas;
     }
-    @Override
+   @Override
     public double getPagoEmpleado() {
+        if (horas<=10)
+        {
+            pago=horas*1.5;
+        }
+        else if (horas<=10)
+        {
+            pago=10*1.5;
+            horasRestantes=horas-10;
+        }
         return pago;
     }
-
     @Override
     public double getHorasRestantes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public String getNombre() {
-        
-        
-        return Nombre;
+        return horasRestantes;
     }
 
    
